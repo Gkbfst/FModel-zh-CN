@@ -26,7 +26,7 @@
         <TextBlock Grid.Row="0" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" Margin="10">
             All releases listed below are available for download. They are sorted by date, with the latest release at the top.
             We regularly remove old ones to keep the list clean and up to date with the latest UE releases.
-            If you wish to manually check for updates, this window is accessible via the Help > Releases menu.
+            If you wish to manually check for updates, this window is accessible via the Help > 版本发布菜单。
         </TextBlock>
 
         <Grid Grid.Row="1" HorizontalAlignment="Center">
@@ -49,16 +49,16 @@
             <Button Grid.Column="0" Style="{DynamicResource {x:Static adonisUi:Styles.AccentButton}}"
                     VerticalAlignment="Top" Height="{Binding ActualHeight, ElementName=RemindButton}"
                     Click="OnDownloadLatest">
-                Download Latest Release
+                下载最新版本
             </Button>
             <StackPanel Grid.Column="2">
-                <adonisControls:SplitButton x:Name="RemindButton" Content="Remind Me Now ..." Command="{Binding RemindMeCommand}">
+                <adonisControls:SplitButton x:Name="RemindButton" Content="立即提醒我…" Command="{Binding RemindMeCommand}">
                     <adonisControls:SplitButton.SplitMenu>
                         <ContextMenu>
-                            <MenuItem Header="In 3 Days" Command="{Binding RemindMeCommand}" CommandParameter="Days" />
-                            <MenuItem Header="Next Week" Command="{Binding RemindMeCommand}" CommandParameter="Week" />
-                            <MenuItem Header="Next Month" Command="{Binding RemindMeCommand}" CommandParameter="Month" />
-                            <MenuItem Header="Never" Command="{Binding RemindMeCommand}" CommandParameter="Never" />
+                            <MenuItem Header="3 天后" Command="{Binding RemindMeCommand}" CommandParameter="Days" />
+                            <MenuItem Header="下周" Command="{Binding RemindMeCommand}" CommandParameter="Week" />
+                            <MenuItem Header="下个月" Command="{Binding RemindMeCommand}" CommandParameter="Month" />
+                            <MenuItem Header="从不" Command="{Binding RemindMeCommand}" CommandParameter="Never" />
                         </ContextMenu>
                     </adonisControls:SplitButton.SplitMenu>
                 </adonisControls:SplitButton>
@@ -79,7 +79,7 @@
                                         <ControlTemplate TargetType="GroupItem">
                                             <GroupBox adonisExtensions:LayerExtension.Layer="3"
                                                       Header="{Binding Name}"
-                                                      HeaderStringFormat="Commits on {0:MMM d, yyyy}"
+                                                      HeaderStringFormat="{}{0:yyyy-MM-dd} 的提交"
                                                       Margin="0 0 0 5">
                                                 <ItemsPresenter />
                                             </GroupBox>
@@ -108,7 +108,7 @@
                                     <Setter.Value>
                                         <ControlTemplate>
                                             <Grid>
-                                                <TextBlock Text="No commits found" FontWeight="SemiBold" TextAlignment="Center"
+                                                <TextBlock Text="未找到提交记录" FontWeight="SemiBold" TextAlignment="Center"
                                                            Foreground="{DynamicResource {x:Static adonisUi:Brushes.ErrorBrush}}" />
                                             </Grid>
                                         </ControlTemplate>

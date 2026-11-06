@@ -1,4 +1,4 @@
-<adonisControls:AdonisWindow x:Class="FModel.MainWindow"
+﻿<adonisControls:AdonisWindow x:Class="FModel.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:FModel"
@@ -81,8 +81,8 @@
             </Grid.ColumnDefinitions>
 
             <Menu Grid.Column="0">
-                <MenuItem Header="Directory">
-                    <MenuItem Header="Selector" Command="{Binding MenuCommand}" CommandParameter="Directory_Selector">
+                <MenuItem Header="目录">
+                    <MenuItem Header="选择器" Command="{Binding MenuCommand}" CommandParameter="Directory_Selector">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -100,7 +100,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Backup" Command="{Binding MenuCommand}" CommandParameter="Directory_Backup" IsEnabled="{Binding Status.IsReady}">
+                    <MenuItem Header="备份" Command="{Binding MenuCommand}" CommandParameter="Directory_Backup" IsEnabled="{Binding Status.IsReady}">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -109,7 +109,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Archives Info" Command="{Binding MenuCommand}" CommandParameter="Directory_ArchivesInfo" IsEnabled="{Binding Status.IsReady}">
+                    <MenuItem Header="存档信息" Command="{Binding MenuCommand}" CommandParameter="Directory_ArchivesInfo" IsEnabled="{Binding Status.IsReady}">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -119,8 +119,8 @@
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Packages">
-                    <MenuItem Header="Search" IsEnabled="{Binding Status.IsReady}" InputGestureText="Ctrl+Shift+F" Click="OnSearchViewClick">
+                <MenuItem Header="包">
+                    <MenuItem Header="搜索" IsEnabled="{Binding Status.IsReady}" InputGestureText="Ctrl+Shift+F" Click="OnSearchViewClick">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -129,7 +129,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="References" IsEnabled="{Binding Status.IsReady}" InputGestureText="Ctrl+Shift+R" Click="OnRefViewClick">
+                    <MenuItem Header="引用" IsEnabled="{Binding Status.IsReady}" InputGestureText="Ctrl+Shift+R" Click="OnRefViewClick">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -138,7 +138,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Favorite Directories" ItemsSource="{Binding CustomDirectories.Directories}" IsEnabled="{Binding Status.IsReady}">
+                    <MenuItem Header="收藏目录" ItemsSource="{Binding CustomDirectories.Directories}" IsEnabled="{Binding Status.IsReady}">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -148,8 +148,8 @@
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Views">
-                    <MenuItem Header="3D Viewer" Command="{Binding MenuCommand}" CommandParameter="Views_3dViewer">
+                <MenuItem Header="视图">
+                    <MenuItem Header="3D 查看器" Command="{Binding MenuCommand}" CommandParameter="Views_3dViewer">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -158,14 +158,14 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Export Session" Command="{Binding MenuCommand}" CommandParameter="Views_ExportSession">
+                    <MenuItem Header="导出会话" Command="{Binding MenuCommand}" CommandParameter="Views_ExportSession">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <StaticResource ResourceKey="ExportSessionIcon" />
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Audio Player" Command="{Binding MenuCommand}" CommandParameter="Views_AudioPlayer">
+                    <MenuItem Header="音频播放器" Command="{Binding MenuCommand}" CommandParameter="Views_AudioPlayer">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -174,7 +174,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Image Merger" Command="{Binding MenuCommand}" CommandParameter="Views_ImageMerger">
+                    <MenuItem Header="图像拼接" Command="{Binding MenuCommand}" CommandParameter="Views_ImageMerger">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -184,9 +184,9 @@
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Settings" Command="{Binding MenuCommand}" CommandParameter="Settings" />
-                <MenuItem Header="Help" >
-                    <MenuItem Header="Donate" Command="{Binding MenuCommand}" CommandParameter="Help_Donate">
+                <MenuItem Header="设置" Command="{Binding MenuCommand}" CommandParameter="Settings" />
+                <MenuItem Header="帮助" >
+                    <MenuItem Header="赞助" Command="{Binding MenuCommand}" CommandParameter="Help_Donate">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -195,7 +195,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Releases" Command="{Binding MenuCommand}" CommandParameter="Help_Releases">
+                    <MenuItem Header="版本发布" Command="{Binding MenuCommand}" CommandParameter="Help_Releases">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -204,7 +204,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Bugs Report" Command="{Binding MenuCommand}" CommandParameter="Help_BugsReport">
+                    <MenuItem Header="问题反馈" Command="{Binding MenuCommand}" CommandParameter="Help_BugsReport">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -213,7 +213,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Discord Server" Command="{Binding MenuCommand}" CommandParameter="Help_Discord">
+                    <MenuItem Header="Discord 服务器" Command="{Binding MenuCommand}" CommandParameter="Help_Discord">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -222,7 +222,7 @@
                             </Viewbox>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="About FModel" Command="{Binding MenuCommand}" CommandParameter="Help_About">
+                    <MenuItem Header="关于 FModel" Command="{Binding MenuCommand}" CommandParameter="Help_About">
                         <MenuItem.Icon>
                             <Viewbox Width="16" Height="16">
                                 <Canvas Width="24" Height="24">
@@ -240,7 +240,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" Text="Preview New Explorer System" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="0" Text="预览新版资源浏览器" VerticalAlignment="Center" />
                 <CheckBox Grid.Column="1" Margin="5 2 5 0" Unchecked="FeaturePreviewOnUnchecked" KeyboardNavigation.TabNavigation="None" KeyboardNavigation.ControlTabNavigation="None"
                           IsChecked="{Binding FeaturePreviewNewAssetExplorer, Source={x:Static settings:UserSettings.Default}, Mode=TwoWay}"
                           Style="{DynamicResource {x:Static adonisUi:Styles.ToggleSwitch}}"/>
@@ -257,7 +257,7 @@
             <GroupBox Grid.Column="0" adonisExtensions:LayerExtension.Layer="2"
                       Padding="0" Background="Transparent">
                 <TabControl x:Name="LeftTabControl" SelectionChanged="OnTabItemChange" SelectedIndex="{Binding SelectedLeftTabIndex, Mode=TwoWay}">
-                    <TabItem Style="{StaticResource TabItemFillSpace}" Header="Archives">
+                    <TabItem Style="{StaticResource TabItemFillSpace}" Header="存档">
                         <DockPanel>
                             <Grid DockPanel.Dock="Top">
                                 <Grid.RowDefinitions>
@@ -271,7 +271,7 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Loading Mode" VerticalAlignment="Center" />
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="加载模式" VerticalAlignment="Center" />
                                 <ComboBox Grid.Row="0" Grid.Column="2" ItemsSource="{Binding LoadingModes.Modes}" IsEnabled="{Binding Status.IsReady}"
                                           SelectedItem="{Binding LoadingMode, Source={x:Static settings:UserSettings.Default}, Mode=TwoWay}">
                                     <ComboBox.ItemTemplate>
@@ -280,7 +280,7 @@
                                         </DataTemplate>
                                     </ComboBox.ItemTemplate>
                                 </ComboBox>
-                                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Content="Load"
+                                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Content="加载"
                                         Command="{Binding LoadingModes.LoadCommand}" IsEnabled="{Binding Status.IsReady}"
                                         CommandParameter="{Binding SelectedItems, ElementName=DirectoryFilesListBox}" />
                             </Grid>
@@ -309,20 +309,20 @@
                                         </Grid.ColumnDefinitions>
 
                                         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding SelectedItem.MountPoint, ElementName=DirectoryFilesListBox, FallbackValue='/', Converter={x:Static converters:TrimRightToLeftConverter.Instance}, ConverterParameter=275}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="Mount Point" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="挂载点" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                         <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding SelectedItem.FileCount, ElementName=DirectoryFilesListBox, FallbackValue='0', StringFormat={}{0:N0} Files}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="File Count" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="文件数" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                         <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding SelectedItem.IsEncrypted, ElementName=DirectoryFilesListBox, FallbackValue='False'}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="2" Grid.Column="1" Text="Is Encrypted" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="2" Grid.Column="1" Text="已加密" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                         <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding SelectedItem.Guid, ElementName=DirectoryFilesListBox, FallbackValue='00000000000000000000000000000000'}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="Global Unique Identifier" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="全局唯一标识符 (GUID)" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                     </Grid>
                                 </StackPanel>
                             </Grid>
                         </DockPanel>
                     </TabItem>
                     <TabItem Style="{StaticResource TabItemFillSpace}"
-                             Header="Folders">
+                             Header="文件夹">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
@@ -344,7 +344,7 @@
                                            Width="16" Height="16" HorizontalAlignment="Center" Margin="0 0 3.5 0" />
                                     <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" TextTrimming="CharacterEllipsis">
                                         <TextBlock.Text>
-                                            <MultiBinding StringFormat="{}'{0}' has {1} folders and {2} packages">
+                                            <MultiBinding StringFormat="{}'{0}' 包含 {1} 个文件夹和 {2} 个包">
                                                 <Binding Path="CUE4Parse.AssetsFolder.SelectedFolder.Header" FallbackValue="None" />
                                                 <Binding Path="CUE4Parse.AssetsFolder.SelectedFolder.Folders.Count" FallbackValue="0" />
                                                 <Binding Path="CUE4Parse.AssetsFolder.SelectedFolder.AssetsList.Assets.Count" FallbackValue="0" />
@@ -353,7 +353,7 @@
                                     </TextBlock>
                                 </StackPanel>
                                 <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                                    <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="Bring Selected Folder To View" Padding="4"
+                                    <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="定位到所选文件夹" Padding="4"
                                             Command="{Binding MenuCommand}" CommandParameter="{Binding CUE4Parse.AssetsFolder.SelectedFolder}">
                                         <Viewbox Width="16" Height="16" HorizontalAlignment="Center">
                                             <Canvas Width="24" Height="24">
@@ -361,7 +361,7 @@
                                             </Canvas>
                                         </Viewbox>
                                     </Button>
-                                    <!-- <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="Expand All (not appropriate for huge amount of folders)" Padding="4" -->
+                                    <!-- <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="全部展开（文件夹数量巨大时不建议）" Padding="4" -->
                                     <!--         Command="{Binding MenuCommand}" CommandParameter="ToolBox_Expand_All"> -->
                                     <!--     <Viewbox Width="16" Height="16" HorizontalAlignment="Center"> -->
                                     <!--         <Canvas Width="24" Height="24"> -->
@@ -369,7 +369,7 @@
                                     <!--         </Canvas> -->
                                     <!--     </Viewbox> -->
                                     <!-- </Button> -->
-                                    <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="Collapse All" Padding="4"
+                                    <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="全部折叠" Padding="4"
                                             Command="{Binding MenuCommand}" CommandParameter="ToolBox_Collapse_All">
                                         <Viewbox Width="16" Height="16" HorizontalAlignment="Center">
                                             <Canvas Width="24" Height="24">
@@ -404,22 +404,22 @@
                                     </Grid.ColumnDefinitions>
 
                                     <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding CUE4Parse.AssetsFolder.SelectedFolder.AssetsList.Assets.Count, FallbackValue=0, StringFormat={}{0:N0}}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Packages Count" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="包数量" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                     <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding CUE4Parse.AssetsFolder.SelectedFolder.Folders.Count, FallbackValue=0, StringFormat={}{0:N0}}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Folders Count" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="文件夹数" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                     <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding CUE4Parse.AssetsFolder.SelectedFolder.Archive, FallbackValue='None'}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="Included In Archive" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="包含于存档" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                     <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding CUE4Parse.AssetsFolder.SelectedFolder.MountPoint, FallbackValue='/', Converter={x:Static converters:TrimRightToLeftConverter.Instance}, ConverterParameter=275}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="Archive Mount Point" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="存档挂载点" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                     <TextBlock Grid.Row="4" Grid.Column="0" Text="{Binding CUE4Parse.AssetsFolder.SelectedFolder.Version, FallbackValue='VER_UE4_LATEST', Converter={x:Static converters:TrimRightToLeftConverter.Instance}, ConverterParameter=275}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                    <TextBlock Grid.Row="4" Grid.Column="1" Text="Archive Version" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                    <TextBlock Grid.Row="4" Grid.Column="1" Text="存档版本" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                 </Grid>
                             </StackPanel>
                         </Grid>
                     </TabItem>
                     <TabItem Style="{StaticResource TabItemFillSpace}"
                              Header="{Binding CUE4Parse.AssetsFolder.SelectedFolder.AssetsList.Assets.Count, FallbackValue=0}"
-                             HeaderStringFormat="{}{0} Packages">
+                             HeaderStringFormat="{}{0} 个包">
                         <DockPanel>
 
                             <inputs:SearchTextBox DockPanel.Dock="Top" x:Name="AssetsSearchTextBox"
@@ -459,15 +459,15 @@
                                         </Grid.ColumnDefinitions>
 
                                         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding SelectedItem.Asset.Offset, ElementName=AssetsListName, FallbackValue=0, StringFormat='{}0x{0:X}'}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="Offset" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="0" Grid.Column="1" Text="偏移" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                         <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding SelectedItem.Asset.Size, ElementName=AssetsListName, FallbackValue=0, Converter={x:Static converters:SizeToStringConverter.Instance}}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="Size" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="1" Grid.Column="1" Text="大小" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                         <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding SelectedItem.Asset.CompressionMethod, ElementName=AssetsListName, FallbackValue='Unknown'}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="2" Grid.Column="1" Text="Compression Method" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="2" Grid.Column="1" Text="压缩方式" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                         <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding SelectedItem.Asset.IsEncrypted, ElementName=AssetsListName, FallbackValue='False'}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="Is Encrypted" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="3" Grid.Column="1" Text="已加密" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                         <TextBlock Grid.Row="4" Grid.Column="0" Text="{Binding SelectedItem.Asset.Vfs.Name, ElementName=AssetsListName, FallbackValue='None'}" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                                        <TextBlock Grid.Row="4" Grid.Column="1" Text="Included In Archive" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                        <TextBlock Grid.Row="4" Grid.Column="1" Text="包含于存档" VerticalAlignment="Center" HorizontalAlignment="Right" />
                                     </Grid>
                                 </StackPanel>
                             </Grid>
@@ -524,7 +524,7 @@
                                                       Width="32"
                                                       Height="28"
                                                       Padding="7"
-                                                      ToolTip="Grid View"
+                                                      ToolTip="网格视图"
                                                       IsChecked="{Binding ExplorerViewMode,
                                                                   Source={x:Static local:Settings.UserSettings.Default},
                                                                   Converter={x:Static converters:EnumToBoolConverter.Instance},
@@ -540,7 +540,7 @@
                                                       Width="32"
                                                       Height="28"
                                                       Padding="7"
-                                                      ToolTip="List View"
+                                                      ToolTip="列表视图"
                                                       IsChecked="{Binding ExplorerViewMode,
                                                                   Source={x:Static local:Settings.UserSettings.Default},
                                                                   Converter={x:Static converters:EnumToBoolConverter.Instance},
@@ -689,7 +689,7 @@
 
                             <controls:CustomRichTextBox Grid.Column="0" Grid.ColumnSpan="3" x:Name="LogRtbName" Style="{StaticResource CustomRichTextBox}" />
                             <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Bottom" Margin="-5 -5 5 5">
-                                <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="Open Output Folder" Padding="0,4,0,4"
+                                <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="打开输出文件夹" Padding="0,4,0,4"
                                         Command="{Binding MenuCommand}" CommandParameter="ToolBox_Open_Output_Directory" Focusable="False">
                                     <Viewbox Width="16" Height="16" HorizontalAlignment="Center">
                                         <Canvas Width="24" Height="24">
@@ -699,7 +699,7 @@
                                         </Canvas>
                                     </Viewbox>
                                 </Button>
-                                <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="Clear Logs" Padding="0,4,0,4"
+                                <Button Style="{DynamicResource {x:Static adonisUi:Styles.ToolbarButton}}" ToolTip="清空日志" Padding="0,4,0,4"
                                         Command="{Binding MenuCommand}" CommandParameter="ToolBox_Clear_Logs" Focusable="False">
                                     <Viewbox Width="16" Height="16" HorizontalAlignment="Center">
                                         <Canvas Width="24" Height="24">
@@ -831,7 +831,7 @@
                                 VerticalContentAlignment="Center"
                                 Style="{StaticResource StatusBarButton}"
                                 Background="{DynamicResource {x:Static adonisUi:Brushes.AlertBrush}}"
-                                ToolTip="A new version of FModel is available. Click to view it."
+                                ToolTip="FModel 有新版本可用，点击查看详情。"
                                 Command="{Binding MenuCommand}"
                                 CommandParameter="Help_Releases">
                             <StackPanel Orientation="Horizontal"
@@ -845,7 +845,7 @@
                                     </Canvas>
                                 </Viewbox>
                                 <TextBlock Margin="10 0 0 0"
-                                           Text="Update Available" />
+                                           Text="有可用更新" />
                             </StackPanel>
                         </Button>
                     </StatusBarItem>
@@ -933,7 +933,7 @@
                         </Canvas>
                     </Viewbox>
                     <StackPanel VerticalAlignment="Center">
-                        <TextBlock Text="Export Session" FontWeight="SemiBold"
+                        <TextBlock Text="导出会话" FontWeight="SemiBold"
                                    Foreground="{DynamicResource {x:Static adonisUi:Brushes.ForegroundBrush}}" />
                         <TextBlock Text="{Binding ToolTip, ElementName=ExportSessionButton}"
                                    MaxWidth="300" TextWrapping="Wrap" FontSize="11"

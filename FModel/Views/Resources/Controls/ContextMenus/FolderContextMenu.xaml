@@ -1,4 +1,4 @@
-<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:settings="clr-namespace:FModel.Settings"
                     xmlns:adonisUi="clr-namespace:AdonisUI;assembly=AdonisUI"
@@ -6,7 +6,7 @@
                     x:Class="FModel.Views.Resources.Controls.ContextMenus.FolderContextMenuDictionary">
     <ContextMenu x:Key="FolderContextMenu" x:Shared="False"
                  Opened="FolderContextMenu_OnOpened">
-        <MenuItem Header="Export Folder">
+        <MenuItem Header="导出文件夹">
             <MenuItem.Icon>
                 <Viewbox Width="16"
                          Height="16">
@@ -18,7 +18,7 @@
                 </Viewbox>
             </MenuItem.Icon>
 
-            <MenuItem Header="Raw Data (.uasset)"
+            <MenuItem Header="原始数据（.uasset）"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportData, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -39,7 +39,7 @@
                     </Viewbox>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Embedded Files"
+            <MenuItem Header="嵌入文件"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportEmbeddedFiles, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -61,7 +61,7 @@
                     </Viewbox>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Properties (.json)"
+            <MenuItem Header="属性（.json）"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportProperties, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -82,7 +82,7 @@
                     </Viewbox>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Textures"
+            <MenuItem Header="贴图"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportTextures, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -103,7 +103,7 @@
                     </Viewbox>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Decompiled Blueprints"
+            <MenuItem Header="已反编译蓝图"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportCode, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -124,7 +124,7 @@
                     </Viewbox>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Models"
+            <MenuItem Header="模型"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportModels, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -145,7 +145,7 @@
                     </Viewbox>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Worlds"
+            <MenuItem Header="关卡"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportWorlds, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -171,7 +171,7 @@
                     </Viewbox>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Animations"
+            <MenuItem Header="动画"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportAnimations, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -192,7 +192,7 @@
                     </Viewbox>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="Audio"
+            <MenuItem Header="音频"
                       Command="{Binding RightClickMenuCommand}"
                       InputGestureText="{Binding ExportAudio, Source={x:Static settings:UserSettings.Default}}">
                 <MenuItem.CommandParameter>
@@ -215,7 +215,7 @@
             </MenuItem>
         </MenuItem>
         <Separator />
-        <MenuItem Header="Favorite Directory" Click="OnFavoriteDirectoryClick"
+        <MenuItem Header="收藏此目录" Click="OnFavoriteDirectoryClick"
                   CommandParameter="{Binding Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}">
             <MenuItem.Icon>
                 <Viewbox Width="16" Height="16">
@@ -225,7 +225,7 @@
                 </Viewbox>
             </MenuItem.Icon>
         </MenuItem>
-        <MenuItem Header="Copy Directory Path" Click="OnCopyDirectoryPathClick"
+        <MenuItem Header="复制目录路径" Click="OnCopyDirectoryPathClick"
                   CommandParameter="{Binding Tag, RelativeSource={RelativeSource AncestorType=ContextMenu}}">
             <MenuItem.Icon>
                 <Viewbox Width="16" Height="16">

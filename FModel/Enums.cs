@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using FModel.Extensions;
 
@@ -37,57 +37,57 @@ public enum EStatusKind
 
 public enum EAesReload
 {
-    [Description("Always")]
+    [Description("始终")]
     Always,
-    [Description("Never")]
+    [Description("从不")]
     Never,
-    [Description("Once Per Day")]
+    [Description("每天一次")]
     OncePerDay
 }
 
 public enum EDiscordRpc
 {
-    [Description("Always")]
+    [Description("始终")]
     Always,
-    [Description("Never")]
+    [Description("从不")]
     Never
 }
 
 public enum ELoadingMode
 {
-    [Description("Multiple")]
+    [Description("多选")]
     Multiple,
-    [Description("All")]
+    [Description("全部")]
     All,
-    [Description("All (New)")]
+    [Description("全部（新增）")]
     AllButNew,
-    [Description("All (Modified)")]
+    [Description("全部（已修改）")]
     AllButModified,
-    [Description("All (Except Patched Assets)")]
+    [Description("全部（排除补丁资产）")]
     AllButPatched,
 }
 
 public enum ECompressedAudio
 {
-    [Description("Play the decompressed data")]
+    [Description("播放解压后的数据")]
     PlayDecompressed,
-    [Description("Play the compressed data (might not always be a valid audio data)")]
+    [Description("播放压缩数据（可能不是有效音频）")]
     PlayCompressed
 }
 
 public enum EIconStyle
 {
-    [Description("Default")]
+    [Description("默认")]
     Default,
-    [Description("No Background")]
+    [Description("无背景")]
     NoBackground,
-    [Description("No Text")]
+    [Description("无文字")]
     NoText,
     [Description("Flat")]
     Flat,
     [Description("Cataba")]
     Cataba,
-    // [Description("Community")]
+    // [Description("社区")]
     // CommunityMade
 }
 

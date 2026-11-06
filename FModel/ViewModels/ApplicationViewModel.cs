@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -196,7 +196,7 @@ public class ApplicationViewModel : ViewModel
 
     public void RestartWithWarning()
     {
-        MessageBox.Show("It looks like you just changed something.\nFModel will restart to apply your changes.", "Uh oh, a restart is needed", MessageBoxButton.OK, MessageBoxImage.Warning);
+        MessageBox.Show("检测到设置已更改。\nFModel 将重启以应用更改。", "Uh oh, a restart is needed", MessageBoxButton.OK, MessageBoxImage.Warning);
         Restart();
     }
 

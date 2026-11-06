@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using AdonisUI.Controls;
 using System.Collections.Generic;
 using System.Threading;
@@ -150,7 +150,7 @@ public class FModelApiEndpoint : AbstractApiProvider
         else
         {
             MessageBox.Show(
-                "There is a problem reaching the update server, please check your internet connection or try again later.",
+                "无法连接更新服务器，请检查网络连接后重试。",
                 "Update Check Failed", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }

@@ -1,10 +1,10 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace FModel.Extensions.Themes;
 
 public enum EJsonHighlightTheme
 {
-    [Description("Default")]
+    [Description("默认")]
     Default,
     [Description("Mint Lavender")]
     MintLavender,

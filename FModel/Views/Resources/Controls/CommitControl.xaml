@@ -60,7 +60,7 @@
                     </ItemsControl>
                     <TextBlock Grid.Column="2" FontSize="11">
                         <TextBlock.Text>
-                            <MultiBinding StringFormat="{}{0} committed {1}">
+                            <MultiBinding StringFormat="{}{0} 提交了 {1}">
                                 <Binding Path="AuthorNames" />
                                 <Binding Path="Commit.Author.Date" Converter="{x:Static converters:RelativeDateTimeConverter.Instance}" />
                             </MultiBinding>

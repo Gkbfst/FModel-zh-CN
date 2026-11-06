@@ -29,10 +29,10 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"
-                   Text="You can only use backup files when loading new &amp; modified archives. FModel will compare your local archives with the backup file you selected to filter packages and only show what you asked. We provide pre-created backups for some popular games but you can still create your own that will store information about all the game's packages at time T, for later use." />
+                   Text="备份文件仅在以「新增和已修改」模式加载存档时可用。FModel 会将本地存档与所选备份比对，只显示你关心的包。我们为部分热门游戏提供了现成备份，你也可以自行创建，记录某一时刻游戏内所有包的信息以备后用。" />
 
         <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Click="OnCreateBackupClick"
-                Style="{DynamicResource {x:Static adonisUi:Styles.AccentButton}}" Content="Create" />
+                Style="{DynamicResource {x:Static adonisUi:Styles.AccentButton}}" Content="创建" />
 
         <Separator Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource CustomSeparator}" Tag="PRE-CREATED BACKUP FILES" />
 
@@ -55,7 +55,7 @@
                 </Style>
             </ComboBox.Style>
         </ComboBox>
-        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Content="Download" Click="OnDownloadClick">
+        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Content="下载" Click="OnDownloadClick">
             <Button.Style>
                 <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
                     <Setter Property="IsEnabled" Value="True" />
